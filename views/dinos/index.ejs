@@ -1,0 +1,11 @@
+<%- include("../partials/header.ejs") %>
+
+<ul>
+    <% dinos.forEach(dino => { %>
+        <li>
+            <%= dino.name %> is a <%= dino.type %>
+        </li>
+   <% }) %>
+</ul>
+
+<%- include("../partials/footer.ejs") %>
