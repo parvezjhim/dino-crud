@@ -1,9 +1,17 @@
 <%- include("../partials/header.ejs") %>
+<h1>Dino Search Form:</h1>
+
+<form method="GET" action="/dinosaurs">
+    <label for="dinoSearch">Search:</label>
+
+    <input type="text" placeholder="Search dino name..." name="dinoFilter"/>
+    <button type="submit">Search</button>
+</form>
 
 <ul>
-    <% dinos.forEach(dino => { %>
+    <% dinos.forEach((dino, i) => { %>
         <li>
-            <%= dino.name %> is a <%= dino.type %>
+            <%= dino.name %> is a <%= dino.type %> <a href="/dinosaurs/<%= i %>">More info</a>
         </li>
    <% }) %>
 </ul>
